@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Kermitakilla</title>
+
+<meta http-equiv="refresh" content="5; url=home.html">
+
+<style>
+
+body{
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+video{
+width:80%;
+max-width:900px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video autoplay muted>
+<source src="intro.mp4" type="video/mp4">
+</video>
+
+</body>
+</html>
