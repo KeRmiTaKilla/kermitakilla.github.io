@@ -29,7 +29,7 @@ max-width:900px;
 <body>
 
 <video autoplay muted>
-<source src="introname.mp4" type="video/mp4">
+<source src="IntroName.mp4" type="video/mp4">
 </video>
 
 </body>
