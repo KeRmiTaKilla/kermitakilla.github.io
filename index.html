@@ -24,17 +24,20 @@ max-width:1200px;
 
 <body>
 
-<video id="introVideo" autoplay muted playsinline preload="auto">
+<video id="introVideo" autoplay muted playsinline>
 <source src="IntroName.mp4" type="video/mp4">
 </video>
 
 <script>
 const video = document.getElementById("introVideo");
 
-// Unmute once playback begins
-video.onplaying = function() {
-video.muted = false;
+video.onended = function() {
+window.location.href = "home.html";
 };
+</script>
+
+</body>
+</html>};
 
 // Redirect when video finishes
 video.onended = function() {
