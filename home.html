@@ -41,21 +41,32 @@ position:relative;
 width:100%;
 max-width:1200px;
 margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .bannerVideo{
-width:100%;
+width:80%;
 border-radius:10px;
 }
 
-.frogCharacter{
+.frogLeft{
 position:absolute;
-bottom:0;
 left:-120px;
+bottom:0;
 height:420px;
 pointer-events:none;
 }
 
+.frogRight{
+position:absolute;
+right:-120px;
+bottom:0;
+height:420px;
+transform:scaleX(-1);
+pointer-events:none;
+}
 .hero-video{
 width:100%;
 height:auto;
@@ -137,9 +148,12 @@ const frogs = [
 
 ];
 
-const randomFrog = frogs[Math.floor(Math.random() * frogs.length)];
+function randomFrog(){
+return frogs[Math.floor(Math.random()*frogs.length)];
+}
 
-document.getElementById("frogCharacter").src = randomFrog;
+document.getElementById("frogLeft").src = randomFrog();
+document.getElementById("frogRight").src = randomFrog();
 
 </script>
   
@@ -157,14 +171,14 @@ Join the squad and hunt rare loot with us.
 </p>
 
 <div class="hero">
-<div class="hero">
-<div class="hero">
+
+<img id="frogLeft" class="frogLeft">
 
 <video autoplay muted loop playsinline class="bannerVideo">
 <source src="IntroLoop.mp4" type="video/mp4">
 </video>
 
-<img id="frogCharacter" class="frogCharacter">
+<img id="frogRight" class="frogRight">
 
 </div>
 
