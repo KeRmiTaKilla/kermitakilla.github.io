@@ -122,7 +122,27 @@ border-top:1px solid #00ff66;
 </style>
 </head>
 
+<script>
 
+const frogs = [
+
+"/Images/AgentFrog1c.png",
+"/Images/Ff7c1.png",
+"/Images/Gunslinger1c.png",
+"/Images/Jedi2c.png",
+"/Images/Jedic1.png",
+"/Images/Samurai1c.png",
+"/Images/Sc1.png",
+"/Images/Tactical1c.png"
+
+];
+
+const randomFrog = frogs[Math.floor(Math.random() * frogs.length)];
+
+document.getElementById("frogCharacter").src = randomFrog;
+
+</script>
+  
 <body>
 
 <header>
