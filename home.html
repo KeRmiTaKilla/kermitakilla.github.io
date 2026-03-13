@@ -292,6 +292,254 @@ margin:auto;
 display:flex;
 justify-content:center;
 align-items:center;
+padding-top:30px;
+}
+
+.bannerVideo{
+width:65%;
+border-radius:10px;
+}
+
+.frogLeft{
+position:absolute;
+left:-60px;
+bottom:0;
+height:420px;
+pointer-events:none;
+}
+
+.frogRight{
+position:absolute;
+right:-60px;
+bottom:0;
+height:420px;
+transform:scaleX(-1);
+pointer-events:none;
+}
+
+.stream{
+margin-top:40px;
+}
+
+iframe{
+max-width:95%;
+border:2px solid #00ff66;
+border-radius:10px;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.buttons a{
+display:inline-block;
+margin:10px;
+padding:14px 26px;
+background:#001a00;
+border:2px solid #00ff66;
+border-radius:8px;
+color:#00ff66;
+font-weight:bold;
+text-decoration:none;
+transition:.2s;
+}
+
+.buttons a:hover{
+background:#00ff66;
+color:#000;
+}
+
+.section{
+padding:40px 20px;
+}
+
+.enigma{
+background:#001000;
+border-top:2px solid #00ff66;
+border-bottom:2px solid #00ff66;
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+font-size:14px;
+border-top:1px solid #00ff66;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+
+<h1>Kermitakilla</h1>
+
+<h3>Welcome to the Swamp</h3>
+
+<p>
+Streaming looter shooters, RPGs, battle royales, and seasonal grinds like Diablo II Resurrected.
+Join the squad and hunt rare loot with us.
+</p>
+
+
+<div class="hero">
+
+<img id="frogLeft" class="frogLeft">
+
+<video autoplay muted loop playsinline class="bannerVideo">
+<source src="IntroLoop.mp4" type="video/mp4">
+</video>
+
+<img id="frogRight" class="frogRight">
+
+</div>
+
+</header>
+
+
+
+<div class="section stream">
+
+<h2>Latest Stream</h2>
+
+<iframe
+width="100%"
+height="500"
+src="https://www.youtube.com/embed/live_stream?channel=UCduyfl_JAmffIzpufoOj1OQ"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div style="margin-top:20px;">
+<a href="https://youtube.com/@KeRMiTaKiLlA" target="_blank"
+style="padding:12px 25px;border:2px solid #00ff66;color:#00ff66;text-decoration:none;border-radius:6px;">
+Subscribe on YouTube
+</a>
+</div>
+
+
+<div class="section buttons">
+
+<a href="https://youtube.com/@KeRMiTaKiLlA">YouTube</a>
+<a href="https://twitch.tv/kermitakilla">Twitch</a>
+<a href="https://discord.gg/C5XGb98qaj">Discord</a>
+
+</div>
+
+
+<h2>Official Kermitakilla Merch</h2>
+
+<a href="https://merch.streamlabs.com/kermitakilla" target="_blank"
+style="display:inline-block;padding:15px 30px;
+background:#00ff66;color:black;
+text-decoration:none;font-weight:bold;
+border-radius:8px;">
+Visit the Merch Shop
+</a>
+
+
+<div class="section enigma">
+
+<h2>The Enigma Hunt</h2>
+
+<p>
+
+One of the biggest grinds in Diablo II Resurrected is building the legendary
+runeword <b>Enigma</b>.
+
+This series follows the hunt for the runes:
+
+<br><br>
+
+Jah • Ith • Ber
+
+<br><br>
+
+Some days the drops are legendary.
+Some days the RNG laughs at us.
+
+Either way — the grind continues.
+
+</p>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Games on the Channel</h2>
+
+<p>
+
+Diablo II Resurrected<br>
+Call of Duty Warzone<br>
+The Division 1 & 2<br>
+Destiny 2<br>
+Remnant 2<br>
+Outriders
+
+</p>
+
+</div>
+
+
+
+<footer>
+
+© 2026 Kermitakilla.live
+
+<br>
+
+Welcome to the Swamp 🐸
+
+</footer>
+
+
+
+<script>
+
+const frogs = [
+
+"Images/AgentFrog1c.png",
+"Images/Ff7c1.png",
+"Images/Gunslinger1c.png",
+"Images/Jedi2c.png",
+"Images/Jedic1.png",
+"Images/Samurai1c.png",
+"Images/Sc1.png",
+"Images/Tactical1c.png"
+
+];
+
+function randomFrog(){
+return frogs[Math.floor(Math.random()*frogs.length)];
+}
+
+window.onload = function(){
+
+document.getElementById("frogLeft").src = randomFrog();
+document.getElementById("frogRight").src = randomFrog();
+
+};
+
+</script>
+
+</body>
+</html>}
+
+.hero{
+position:relative;
+width:100%;
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .bannerVideo{
