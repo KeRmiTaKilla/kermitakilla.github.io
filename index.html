@@ -5,20 +5,18 @@
 <title>Kermitakilla</title>
 
 <style>
-html, body{
+body{
 margin:0;
-padding:0;
 background:black;
-height:100%;
-overflow:hidden;
 display:flex;
 justify-content:center;
 align-items:center;
+height:100vh;
 }
 
-#introVideo{
-max-width:100%;
-max-height:100%;
+video{
+width:100%;
+max-width:1200px;
 }
 </style>
 
@@ -26,15 +24,20 @@ max-height:100%;
 
 <body>
 
-<video id="introVideo" autoplay muted playsinline preload="auto">
+<video id="introVideo" autoplay muted playsinline>
 <source src="IntroName.mp4" type="video/mp4">
 </video>
 
 <script>
 const video = document.getElementById("introVideo");
 
-// enable audio after first tap
-document.body.addEventListener("click", () => {
+video.onended = function() {
+window.location.href = "home.html";
+};
+</script>
+
+</body>
+</html>document.body.addEventListener("click", () => {
 video.muted = false;
 });
 
