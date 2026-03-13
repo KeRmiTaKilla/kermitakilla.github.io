@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
 <title>Kermitakilla</title>
 
-<meta http-equiv="refresh" content="5; url=home.html">
-
 <style>
-
 body{
+margin:0;
 background:black;
 display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
-margin:0;
 }
 
 video{
-width:80%;
-max-width:900px;
+width:100%;
+max-width:1200px;
 }
-
 </style>
 
 </head>
 
 <body>
 
-<video autoplay muted playsinline>
+<video id="introVideo" autoplay muted playsinline preload="auto">
 <source src="IntroName.mp4" type="video/mp4">
 </video>
+
+<script>
+const video = document.getElementById("introVideo");
+
+// Unmute once playback begins
+video.onplaying = function() {
+video.muted = false;
+};
+
+// Redirect when video finishes
+video.onended = function() {
+window.location.href = "home.html";
+};
+</script>
 
 </body>
 </html>
