@@ -8,17 +8,17 @@
 body{
 margin:0;
 background:black;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
 overflow:hidden;
 }
 
-video{
-width:100%;
-height:auto;
-max-width:1200px;
+#introVideo{
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+width:100vw;
+height:100vh;
+object-fit:contain;
 }
 </style>
 
@@ -33,8 +33,17 @@ max-width:1200px;
 <script>
 const video = document.getElementById("introVideo");
 
-// Enable audio once playback begins
 video.onplaying = function() {
+video.muted = false;
+};
+
+video.onended = function() {
+window.location.href = "home.html";
+};
+</script>
+
+</body>
+</html>video.onplaying = function() {
 video.muted = false;
 };
 
