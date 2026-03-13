@@ -8,14 +8,16 @@
 body{
 margin:0;
 background:black;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+overflow:hidden;
 }
 
 video{
 width:100%;
+height:auto;
 max-width:1200px;
 }
 </style>
@@ -31,10 +33,19 @@ max-width:1200px;
 <script>
 const video = document.getElementById("introVideo");
 
-// Unmute once playback begins
+// Enable audio once playback begins
 video.onplaying = function() {
 video.muted = false;
 };
+
+// Redirect immediately when video ends
+video.onended = function() {
+window.location.href = "home.html";
+};
+</script>
+
+</body>
+</html>};
 
 // Redirect when video finishes
 video.onended = function() {
