@@ -110,6 +110,29 @@ color:#000;
 padding:40px 20px;
 }
 
+.merchButton{
+display:inline-block;
+padding:18px 40px;
+background:linear-gradient(#00ff66,#00cc55);
+color:black;
+font-weight:bold;
+border-radius:10px;
+text-decoration:none;
+box-shadow:
+0 0 10px #00ff66,
+0 0 25px #00ff66,
+0 0 50px #00ff66;
+transition:.25s;
+}
+
+.merchButton:hover{
+transform:scale(1.08);
+box-shadow:
+0 0 20px #00ff66,
+0 0 40px #00ff66,
+0 0 70px #00ff66;
+}
+  
 .enigma{
 background:#001000;
 border-top:2px solid #00ff66;
@@ -185,19 +208,25 @@ Subscribe on YouTube
 <a href="https://twitch.tv/kermitakilla">Twitch</a>
 <a href="https://discord.gg/C5XGb98qaj">Discord</a>
 
-</div>
-
+<div class="section merch">
 
 <h2>Official Kermitakilla Merch</h2>
 
-<a href="https://streamlabs.com/jkermitriley/merch" target="_blank"
-style="display:inline-block;padding:15px 30px;
-background:#00ff66;color:black;
-text-decoration:none;font-weight:bold;
-border-radius:8px;">
-Visit the Merch Shop
+<div class="merchPreview">
+
+<img src="Images/hoodie.png">
+<img src="Images/shirt.png">
+<img src="Images/hat.png">
+
+</div>
+
+<a class="merchButton"
+href="https://merch.streamlabs.com/kermitakilla"
+target="_blank">
+Enter the Swamp Shop
 </a>
 
+</div>
 
 <div class="section enigma">
 
