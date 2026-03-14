@@ -5,6 +5,7 @@
 <title>Kermitakilla</title>
 
 <style>
+
 body{
 margin:0;
 background:black;
@@ -12,14 +13,17 @@ display:flex;
 justify-content:center;
 align-items:center;
 height:100vh;
+overflow:hidden;
 }
 
 video{
-width:100%;
-max-width:1200px;
+width:90%;
+max-width:1000px;
+height:auto;
+display:block;
 }
-</style>
 
+</style>
 </head>
 
 <body>
@@ -29,82 +33,20 @@ max-width:1200px;
 </video>
 
 <script>
+
 const video = document.getElementById("introVideo");
 
-video.onended = function() {
-window.location.href = "home.html";
-};
-</script>
-
-</body>
-</html>document.body.addEventListener("click", () => {
+// allow sound if user taps
+document.body.addEventListener("click", () => {
 video.muted = false;
 });
 
-// redirect when finished
+// redirect when video finishes
 video.onended = function(){
 window.location.href = "home.html";
 };
+
 </script>
 
-</body>
-</html>video.onplaying = function(){
-video.muted = false;
-};
-
-video.onended = function(){
-window.location.href = "home.html";
-};
-</script>
-
-</body>
-</html>video.onplaying = function(){
-video.muted = false;
-};
-
-video.onended = function(){
-window.location.href = "home.html";
-};
-</script>
-
-</body>
-</html>
-video.onplaying = function(){
-video.muted = false;
-};
-
-video.onended = function(){
-window.location.href = "home.html";
-};
-</script>
-
-</body>
-</html>video.muted = false;
-};
-
-video.onended = function() {
-window.location.href = "home.html";
-};
-</script>
-
-</body>
-</html>video.onplaying = function() {
-video.muted = false;
-};
-
-// Redirect immediately when video ends
-video.onended = function() {
-window.location.href = "home.html";
-};
-</script>
-
-</body>
-</html>};
-
-// Redirect when video finishes
-video.onended = function() {
-window.location.href = "home.html";
-};
-</script>
 </body>
 </html>
