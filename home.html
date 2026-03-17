@@ -110,9 +110,10 @@ color:#000;
 
 /* STORE BUTTON */
 .store-btn{
-display:inline-block;
-margin-top:15px;
-transition:.2s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
 }
 
 .store-img{
@@ -283,14 +284,16 @@ Welcome to the Swamp 🐸
 
 <script>
 const channelID="UCduyfl_JAmffIzpufoOj1OQ";
-fetch("https://api.allorigins.win/get?url="+encodeURIComponent(
-"https://www.youtube.com/feeds/videos.xml?channel_id="+channelID))
-.then(r=>r.json()).then(data=>{
-const xml=new DOMParser().parseFromString(data.contents,"text/xml");
-const id=xml.querySelector("entry > id").textContent.split(":")[2];
-document.getElementById("latestVideo").innerHTML=
-`<iframe height="350" src="https://www.youtube.com/embed/${id}" allowfullscreen></iframe>`;
+
+fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`)
+.then(res=>res.json())
+.then(data=>{
+  const videoID = data.items[0].link.split("v=")[1];
+  
+  document.getElementById("latestVideo").innerHTML =
+  `<iframe height="350" src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
 });
+</script>
 
 const frogs=[
 "images/AgentFrog1c.png",
