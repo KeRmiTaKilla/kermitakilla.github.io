@@ -11,13 +11,16 @@
 <style>
 
 body{
-  background:#000;
-  color:#ccffcc; /* brighter, readable green */
   font-family:'Orbitron', sans-serif;
+  color:#ccffcc;
+  margin:0;
+  text-align:center;
+  background:
     radial-gradient(circle at 50% 20%, rgba(0,255,100,0.15), transparent 60%),
     radial-gradient(circle at 50% 80%, rgba(0,255,100,0.05), transparent 70%),
     #000;
 }
+  
 img{
 max-width:100%;
 height:auto;
@@ -41,11 +44,11 @@ h1, h2 {
 h1{font-size:48px;margin-bottom:10px;}
 h2{color:#00ff66;margin-top:40px;}
 
-p{ color:#aaffaa;
-}
-max-width:800px;
-margin:auto;
-line-height:1.6;
+p{
+  color:#aaffaa;
+  max-width:800px;
+  margin:auto;
+  line-height:1.6;
 }
 
 .hero{
@@ -293,8 +296,18 @@ fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
   document.getElementById("latestVideo").innerHTML =
   `<iframe height="350" src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
 });
-</script>
+<script>
+const channelID="UCduyfl_JAmffIzpufoOj1OQ";
 
+fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`)
+.then(res=>res.json())
+.then(data=>{
+  const videoID = data.items[0].link.split("v=")[1];
+  document.getElementById("latestVideo").innerHTML =
+  `<iframe height="350" src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
+});
+
+/* 🐸 FROG SYSTEM (FIXED) */
 const frogs=[
 "images/AgentFrog1c.png",
 "images/Ff7c1.png",
@@ -307,13 +320,13 @@ const frogs=[
 ];
 
 function randomFrog(){
-return frogs[Math.floor(Math.random()*frogs.length)];
+  return frogs[Math.floor(Math.random()*frogs.length)];
 }
 
-window.onload=function(){
-document.getElementById("frogLeft").src=randomFrog();
-document.getElementById("frogRight").src=randomFrog();
-};
+window.addEventListener("DOMContentLoaded", function(){
+  document.getElementById("frogLeft").src = randomFrog();
+  document.getElementById("frogRight").src = randomFrog();
+});
 </script>
 
 </body>
