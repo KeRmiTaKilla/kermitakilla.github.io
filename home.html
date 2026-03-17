@@ -2,6 +2,7 @@
 <html>
 <head>
 
+  
 <meta charset="UTF-8">
 <title>Kermitakilla</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,100 +21,69 @@ body{
     radial-gradient(circle at 50% 80%, rgba(0,255,100,0.05), transparent 70%),
     #000;
 }
-
-img{max-width:100%;height:auto;}
+  
+img{
+max-width:100%;
+height:auto;
+}
 
 header{
 padding:20px 20px 60px;
 background:linear-gradient(#001a00,#000);
 border-bottom:2px solid #00ff66;
 }
-
-h1,h2,h3{font-family:'Cinzel', serif;letter-spacing:1px;}
-h1,h2{text-shadow:0 0 5px #00ff66,0 0 10px #00ff66,0 0 20px rgba(0,255,102,0.5);}
+h1, h2, h3 {
+  font-family:'Cinzel', serif;
+  letter-spacing:1px;
+}
+h1, h2 {
+  text-shadow:
+    0 0 5px #00ff66,
+    0 0 10px #00ff66,
+    0 0 20px rgba(0,255,102,0.5);
+}
 h1{font-size:48px;margin-bottom:10px;}
 h2{color:#00ff66;margin-top:40px;}
 
-p{color:#aaffaa;max-width:800px;margin:auto;line-height:1.6;}
+p{
+  color:#aaffaa;
+  max-width:800px;
+  margin:auto;
+  line-height:1.6;
+}
 
 .hero{
   position:relative;
   max-width:1100px;
   margin:auto;
-  padding:60px 0 80px;
+  padding:40px 0 60px;
 }
-
-/* VIDEO */
+  
 .bannerVideo{
   width:60%;
   max-width:750px;
   border-radius:12px;
   display:block;
-  margin:0 auto;
+  margin:0 auto; /* centers it */
   position:relative;
+  z-index:1;
+}
+
+.frogLeft, .frogRight{
+  position:absolute;
+  bottom:0;
+  height:160px;
+  pointer-events:none;
   z-index:2;
 }
 
-/* TOP FROG */
-.frogTopBody{
-  position:absolute;
-  bottom:20px;
-  left:50%;
-  transform:translateX(-50%);
-  height:260px;
-  z-index:1;
-  pointer-events:none;
+.frogLeft{
+  left:0;
 }
 
-.frogTopHands{
-  position:absolute;
-  bottom:40px; /* FIXED */
-  left:50%;
-  transform:translateX(-50%);
-  height:120px;
-  z-index:3;
-  pointer-events:none;
-}
-
-/* VIDEO SECTION */
-.videoWrap{
-  position:relative;
-  display:inline-block;
-}
-
-.videoFrame{
-  position:relative;
-  z-index:2;
-  border:2px solid #00ff66;
-  border-radius:10px;
-}
-
-/* SIDE FROG */
-.frogSideBody{
-  position:absolute;
-  right:-30px; /* FIXED */
-  top:50%;
-  transform:translateY(-50%);
-  height:320px;
-  z-index:1;
-  pointer-events:none;
-}
-
-.frogSideArm{
-  position:absolute;
-  right:140px; /* FIXED */
-  top:55%;
-  transform:translateY(-50%);
-  height:220px;
-  z-index:3;
-  pointer-events:none;
-}
-
-/* hover glow */
-.videoFrame:hover{
-  box-shadow:
-    0 0 15px #00ff66,
-    0 0 35px rgba(0,255,100,0.5);
+.frogRight{
+  right:0;
+  transform:scaleX(-1);
 }
 
 .contentRow{
@@ -124,7 +94,11 @@ flex-wrap:wrap;
 margin-top:40px;
 }
 
-iframe{max-width:95%;border-radius:10px;}
+iframe{
+max-width:95%;
+border:2px solid #00ff66;
+border-radius:10px;
+}
 
 .buttons a{
 display:inline-block;
@@ -139,47 +113,83 @@ text-decoration:none;
 transition:.2s;
 }
 
-.buttons a:hover{background:#00ff66;color:#000;}
-
-.store-btn{
-display:flex;
-justify-content:center;
-align-items:center;
-margin-top:20px;
+.buttons a:hover{
+background:#00ff66;
+color:#000;
 }
 
-.store-img{width:200px;}
+/* STORE BUTTON */
+.store-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+}
+
+.store-img{
+width:200px;
+}
 
 .store-btn:hover .store-img{
 content:url("images/ui/store/kermitakilla-store-hover.webp");
 }
 
-.store-btn:hover{transform:scale(1.05);}
-.store-btn:active{transform:scale(0.95);}
+.store-btn:hover{
+transform:scale(1.05);
+}
 
-.merchPreview a{display:inline-block;transition:.2s;}
-.merchPreview a:hover{transform:scale(1.08);}
+.store-btn:active{
+transform:scale(0.95);
+}
+
+/* MERCH */
+.merchPreview a{
+  display:inline-block;
+  transition:.2s;
+}
+
+.merchPreview a:hover{
+  transform:scale(1.08);
+}
 
 .merchPreview img{
 width:120px;
 border-radius:8px;
 border:2px solid #00ff66;
+transition:.2s;
 }
 
 .merchPreview a:hover img{
-box-shadow:0 0 10px #00ff66,0 0 25px rgba(0,255,100,0.6);
+  box-shadow:
+    0 0 10px #00ff66,
+    0 0 25px rgba(0,255,100,0.6);
 }
 
+.merchButton{
+display:inline-block;
+margin-top:20px;
+padding:14px 28px;
+border:2px solid #00ff66;
+border-radius:8px;
+color:#00ff66;
+text-decoration:none;
+font-weight:bold;
+}
+
+.merchButton:hover{
+background:#00ff66;
+color:#000;
+}
+
+/* MOBILE */
 @media (max-width:768px){
 .bannerVideo{width:90%;}
-.frogTopBody{height:200px;}
-.frogTopHands{height:90px;}
-.frogSideBody{display:none;}
-.frogSideArm{display:none;}
 .store-img{width:160px;}
+.merchPreview img{width:100px;}
 }
 
 </style>
+
 </head>
 
 <body>
@@ -196,13 +206,13 @@ Join the squad and hunt rare loot.
 
 <div class="hero">
 
-<img src="images/frogs/frog-top-body.webp" class="frogTopBody">
+<img id="frogLeft" class="frogLeft">
 
 <video autoplay muted loop playsinline class="bannerVideo">
 <source src="images/bannerloop.mp4" type="video/mp4">
 </video>
 
-<img src="images/frogs/frog-top-hands.webp" class="frogTopHands">
+<img id="frogRight" class="frogRight">
 
 </div>
 
@@ -220,17 +230,7 @@ allowfullscreen></iframe>
 
 <div>
 <h2>Latest Upload</h2>
-
-<div class="videoWrap">
-
-<img src="images/frogs/frog-side-body.webp" class="frogSideBody">
-
-<div id="latestVideo"></div> <!-- FIXED -->
-
-<img src="images/frogs/frog-side-arm.webp" class="frogSideArm">
-
-</div>
-
+<div id="latestVideo"></div>
 </div>
 
 </div>
@@ -248,24 +248,51 @@ allowfullscreen></iframe>
 <h2>Official Kermitakilla Merch</h2>
 
 <a href="https://streamlabs.com/jkermitriley/merch" target="_blank" class="store-btn">
-<img src="images/ui/store/kermitakilla-store-main.webp" class="store-img">
+  <img src="images/ui/store/kermitakilla-store-main.webp" class="store-img">
 </a>
 
 <div class="merchPreview">
+
 <a href="https://streamlabs.com/jkermitriley/merch" target="_blank">
-<img src="images/hoodie.jpg">
+  <img src="images/hoodie.jpg">
 </a>
 
 <a href="https://streamlabs.com/jkermitriley/merch" target="_blank">
-<img src="images/shirt.jpg">
+  <img src="images/shirt.jpg">
 </a>
 
 <a href="https://streamlabs.com/jkermitriley/merch" target="_blank">
-<img src="images/hat.jpg">
+  <img src="images/hat.jpg">
 </a>
+
 </div>
 
+<p>
+Some days the drops are legendary.<br>
+Some days the RNG laughs at us.<br><br>
+Either way — the grind continues.
+</p>
+
 </div>
+
+<!-- GAMES -->
+<div class="section">
+<h2>Games on the Channel</h2>
+<p>
+Diablo II Resurrected<br>
+Call of Duty Warzone<br>
+The Division 1 & 2<br>
+Destiny 2<br>
+Remnant 2<br>
+Outriders
+</p>
+</div>
+
+
+<footer>
+© 2026 Kermitakilla.live<br>
+Welcome to the Swamp 🐸
+</footer>
 
 <script>
 const channelID="UCduyfl_JAmffIzpufoOj1OQ";
@@ -273,12 +300,30 @@ const channelID="UCduyfl_JAmffIzpufoOj1OQ";
 fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`)
 .then(res=>res.json())
 .then(data=>{
-const videoID = data.items[0].link.split("v=")[1];
+  const videoID = data.items[0].link.split("v=")[1];
+  document.getElementById("latestVideo").innerHTML =
+  `<iframe height="350" src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
+});
 
-document.getElementById("latestVideo").innerHTML =
-`<iframe class="videoFrame" height="350"
-src="https://www.youtube.com/embed/${videoID}"
-allowfullscreen></iframe>`;
+/* 🐸 FROG SYSTEM */
+const frogs=[
+"images/AgentFrog1c.png",
+"images/Ff7c1.png",
+"images/Gunslinger1c.png",
+"images/Jedi2c.png",
+"images/Jedic1.png",
+"images/Samurai1c.png",
+"images/Sc1.png",
+"images/Tactical1c.png"
+];
+
+function randomFrog(){
+  return frogs[Math.floor(Math.random()*frogs.length)];
+}
+
+window.addEventListener("DOMContentLoaded", function(){
+  document.getElementById("frogLeft").src = randomFrog();
+  document.getElementById("frogRight").src = randomFrog();
 });
 </script>
 
