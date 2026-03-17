@@ -145,12 +145,13 @@ transform:scale(0.95);
 }
 
 /* MERCH */
-.merchPreview{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:20px;
+.merchPreview a{
+  display:inline-block;
+  transition:.2s;
+}
+
+.merchPreview a:hover{
+  transform:scale(1.08);
 }
 
 .merchPreview img{
@@ -160,8 +161,10 @@ border:2px solid #00ff66;
 transition:.2s;
 }
 
-.merchPreview img:hover{
-transform:scale(1.08);
+.merchPreview a:hover img{
+  box-shadow:
+    0 0 10px #00ff66,
+    0 0 25px rgba(0,255,100,0.6);
 }
 
 .merchButton{
@@ -251,9 +254,19 @@ allowfullscreen></iframe>
 </a>
 
 <div class="merchPreview">
-<img src="images/hoodie.jpg">
-<img src="images/shirt.jpg">
-<img src="images/hat.jpg">
+
+<a href="https://merch.streamlabs.com/kermitakilla" target="_blank">
+  <img src="images/hoodie.jpg">
+</a>
+
+<a href="https://merch.streamlabs.com/kermitakilla" target="_blank">
+  <img src="images/shirt.jpg">
+</a>
+
+<a href="https://merch.streamlabs.com/kermitakilla" target="_blank">
+  <img src="images/hat.jpg">
+</a>
+
 </div>
 
 <p>
