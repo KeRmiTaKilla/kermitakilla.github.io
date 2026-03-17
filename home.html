@@ -288,22 +288,11 @@ fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
 .then(res=>res.json())
 .then(data=>{
   const videoID = data.items[0].link.split("v=")[1];
-  
-  document.getElementById("latestVideo").innerHTML =
-  `<iframe height="350" src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
-});
-<script>
-const channelID="UCduyfl_JAmffIzpufoOj1OQ";
-
-fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`)
-.then(res=>res.json())
-.then(data=>{
-  const videoID = data.items[0].link.split("v=")[1];
   document.getElementById("latestVideo").innerHTML =
   `<iframe height="350" src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
 });
 
-/* 🐸 FROG SYSTEM (FIXED) */
+/* 🐸 FROG SYSTEM */
 const frogs=[
 "images/AgentFrog1c.png",
 "images/Ff7c1.png",
