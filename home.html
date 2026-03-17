@@ -67,7 +67,7 @@ p{color:#aaffaa;max-width:800px;margin:auto;line-height:1.6;}
 
 .frogTopHands{
   position:absolute;
-  bottom:0;
+  bottom:40px; /* FIXED */
   left:50%;
   transform:translateX(-50%);
   height:120px;
@@ -91,7 +91,7 @@ p{color:#aaffaa;max-width:800px;margin:auto;line-height:1.6;}
 /* SIDE FROG */
 .frogSideBody{
   position:absolute;
-  right:-60px;
+  right:-30px; /* FIXED */
   top:50%;
   transform:translateY(-50%);
   height:320px;
@@ -101,7 +101,7 @@ p{color:#aaffaa;max-width:800px;margin:auto;line-height:1.6;}
 
 .frogSideArm{
   position:absolute;
-  right:120px;
+  right:140px; /* FIXED */
   top:55%;
   transform:translateY(-50%);
   height:220px;
@@ -225,7 +225,7 @@ allowfullscreen></iframe>
 
 <img src="images/frogs/frog-side-body.webp" class="frogSideBody">
 
-<div id="latestVideo" class="videoFrame"></div>
+<div id="latestVideo"></div> <!-- FIXED -->
 
 <img src="images/frogs/frog-side-arm.webp" class="frogSideArm">
 
@@ -274,8 +274,11 @@ fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://www.youtube.com/feed
 .then(res=>res.json())
 .then(data=>{
 const videoID = data.items[0].link.split("v=")[1];
+
 document.getElementById("latestVideo").innerHTML =
-`<iframe height="350" src="https://www.youtube.com/embed/${videoID}" allowfullscreen></iframe>`;
+`<iframe class="videoFrame" height="350"
+src="https://www.youtube.com/embed/${videoID}"
+allowfullscreen></iframe>`;
 });
 </script>
 
