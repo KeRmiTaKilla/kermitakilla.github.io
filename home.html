@@ -131,19 +131,43 @@ color:#000;
 padding:40px 20px;
 }
 
-.merchButton{
-display:inline-block;
-padding:18px 40px;
-background:linear-gradient(#00ff66,#00cc55);
-color:black;
-font-weight:bold;
-border-radius:10px;
-text-decoration:none;
-box-shadow:
-0 0 10px #00ff66,
-0 0 25px #00ff66,
-0 0 50px #00ff66;
-transition:.25s;
+/* Button container */
+.store-btn {
+  display: inline-block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Image inside button */
+.store-img {
+  display: block;
+  width: 220px; /* adjust size if needed */
+  height: auto;
+  transition: opacity 0.25s ease;
+}
+
+/* Hover swap (desktop) */
+.store-btn:hover .store-img {
+  content: url("/images/ui/store/kermitakilla-store-hover.webp");
+}
+
+/* Glow + scale on hover */
+.store-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,122,0,0.6);
+}
+
+/* Click feedback */
+.store-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(255,122,0,0.8);
+}
+
+/* Mobile tap effect (since no hover) */
+.store-btn:active .store-img {
+  content: url("/images/ui/store/kermitakilla-store-hover.webp");
 }
 
 .merchButton:hover{
