@@ -18,13 +18,11 @@ margin:0;
 text-align:center;
 }
 
-/* GLOBAL IMAGE FIX */
 img{
 max-width:100%;
 height:auto;
 }
 
-/* HEADER */
 header{
 padding:20px 20px 60px;
 background:linear-gradient(#001a00,#000);
@@ -40,7 +38,6 @@ margin:auto;
 line-height:1.6;
 }
 
-/* HERO */
 .hero{
 position:relative;
 max-width:1100px;
@@ -57,7 +54,7 @@ max-width:750px;
 border-radius:12px;
 }
 
-.frogLeft, .frogRight{
+.frogLeft,.frogRight{
 position:absolute;
 bottom:-10px;
 height:180px;
@@ -67,7 +64,6 @@ pointer-events:none;
 .frogLeft{left:-10px;}
 .frogRight{right:-10px;transform:scaleX(-1);}
 
-/* CONTENT */
 .section{padding:40px 20px;}
 
 .contentRow{
@@ -84,7 +80,6 @@ border:2px solid #00ff66;
 border-radius:10px;
 }
 
-/* BUTTONS */
 .buttons a{
 display:inline-block;
 margin:10px;
@@ -126,7 +121,7 @@ transform:scale(1.05);
 transform:scale(0.95);
 }
 
-/* MERCH GRID */
+/* MERCH */
 .merchPreview{
 display:flex;
 justify-content:center;
@@ -146,7 +141,6 @@ transition:.2s;
 transform:scale(1.08);
 }
 
-/* STORE LINK BUTTON */
 .merchButton{
 display:inline-block;
 margin-top:20px;
@@ -163,7 +157,7 @@ background:#00ff66;
 color:#000;
 }
 
-/* MOBILE TWEAK */
+/* MOBILE */
 @media (max-width:768px){
 .bannerVideo{width:90%;}
 .store-img{width:160px;}
@@ -191,7 +185,7 @@ Join the squad and hunt rare loot.
 <img id="frogLeft" class="frogLeft">
 
 <video autoplay muted loop playsinline class="bannerVideo">
-<source src="Images/bannerloop.mp4" type="video/mp4">
+<source src="images/bannerloop.mp4" type="video/mp4">
 </video>
 
 <img id="frogRight" class="frogRight">
@@ -200,7 +194,7 @@ Join the squad and hunt rare loot.
 
 </header>
 
-<!-- STREAM + VIDEO -->
+<!-- STREAM -->
 <div class="section contentRow">
 
 <div>
@@ -234,9 +228,9 @@ allowfullscreen></iframe>
 </a>
 
 <div class="merchPreview">
-<img src="Images/hoodie.png">
-<img src="Images/shirt.png">
-<img src="Images/hat.png">
+<img src="images/hoodie.png">
+<img src="images/shirt.png">
+<img src="images/hat.png">
 </div>
 
 <a class="merchButton"
@@ -271,7 +265,6 @@ Outriders
 Welcome to the Swamp 🐸
 </footer>
 
-<!-- SCRIPTS -->
 <script>
 const channelID="UCduyfl_JAmffIzpufoOj1OQ";
 fetch("https://api.allorigins.win/get?url="+encodeURIComponent(
@@ -284,14 +277,14 @@ document.getElementById("latestVideo").innerHTML=
 });
 
 const frogs=[
-"Images/AgentFrog1c.png",
-"Images/Ff7c1.png",
-"Images/Gunslinger1c.png",
-"Images/Jedi2c.png",
-"Images/Jedic1.png",
-"Images/Samurai1c.png",
-"Images/Sc1.png",
-"Images/Tactical1c.png"
+"images/AgentFrog1c.png",
+"images/Ff7c1.png",
+"images/Gunslinger1c.png",
+"images/Jedi2c.png",
+"images/Jedic1.png",
+"images/Samurai1c.png",
+"images/Sc1.png",
+"images/Tactical1c.png"
 ];
 
 function randomFrog(){
@@ -304,346 +297,5 @@ document.getElementById("frogRight").src=randomFrog();
 };
 </script>
 
-</body>
-</html>
-p{
-max-width:800px;
-margin:auto;
-line-height:1.6;
-}
-
-.hero{
-position:relative;
-width:100%;
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-padding-top:30px;
-padding-bottom:20px;
-}
-
-.bannerVideo{
-width:60%;
-max-width:750px;
-border-radius:12px;
-display:block;
-}
-
-.frogLeft{
-position:absolute;
-left:-20px;
-bottom:-10px;
-height:210px;
-pointer-events:none;
-z-index:2;
-}
-
-.frogRight{
-position:absolute;
-right:-20px;
-bottom:-10px;
-height:210px;
-transform:scaleX(-1);
-pointer-events:none;
-z-index:2;
-}
-
-.stream{
-margin-top:40px;
-}
-
-.contentRow{
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.contentBox iframe{
-border-radius:10px;
-border:2px solid #00ff66;
-}
-  
-iframe{
-max-width:95%;
-border:2px solid #00ff66;
-border-radius:10px;
-}
-
-#latestVideo iframe{
-border:2px solid #00ff66;
-border-radius:10px;
-}
-
-.buttons{
-margin-top:30px;
-}
-
-.buttons a{
-display:inline-block;
-margin:10px;
-padding:14px 26px;
-background:#001a00;
-border:2px solid #00ff66;
-border-radius:8px;
-color:#00ff66;
-font-weight:bold;
-text-decoration:none;
-transition:.2s;
-}
-
-.buttons a:hover{
-background:#00ff66;
-color:#000;
-}
-
-.section{
-padding:40px 20px;
-}
-
-/* Button container */
-.store-btn {
-  display: inline-block;
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Image inside button */
-.store-img {
-  display: block;
-  width: 220px; /* adjust size if needed */
-  height: auto;
-  transition: opacity 0.25s ease;
-}
-
-/* Hover swap (desktop) */
-.store-btn:hover .store-img {
-  content: url("/images/ui/store/kermitakilla-store-hover.webp");
-}
-
-/* Glow + scale on hover */
-.store-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255,122,0,0.6);
-}
-
-/* Click feedback */
-.store-btn:active {
-  transform: scale(0.95);
-  box-shadow: 0 0 10px rgba(255,122,0,0.8);
-}
-
-/* Mobile tap effect (since no hover) */
-.store-btn:active .store-img {
-  content: url("/images/ui/store/kermitakilla-store-hover.webp");
-}
-
-.merchButton:hover{
-transform:scale(1.08);
-box-shadow:
-0 0 20px #00ff66,
-0 0 40px #00ff66,
-0 0 70px #00ff66;
-}
-</style>
-</head>
-
-<script>
-
-const channelID = "UCduyfl_JAmffIzpufoOj1OQ";
-const rssURL = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelID}`;
-
-fetch("https://api.allorigins.win/get?url=" + encodeURIComponent(rssURL))
-.then(response => response.json())
-.then(data => {
-
-const parser = new DOMParser();
-const xml = parser.parseFromString(data.contents,"text/xml");
-
-const videoID = xml.querySelector("entry > id").textContent.split(":")[2];
-
-document.getElementById("latestVideo").innerHTML = `
-<iframe width="100%" height="350"
-src="https://www.youtube.com/embed/${videoID}"
-frameborder="0"
-allowfullscreen></iframe>
-`;
-
-});
-
-</script>
-
-<body>
-
-<header>
-
-<h1>Kermitakilla</h1>
-
-<h3>Welcome to the Swamp</h3>
-
-<p>
-Streaming looter shooters, RPGs, battle royales, and seasonal grinds like Diablo II Resurrected.
-Join the squad and hunt rare loot with us.
-</p>
-
-<div class="hero">
-
-<img id="frogLeft" class="frogLeft">
-
-<video autoplay muted loop playsinline class="bannerVideo">
-<source src="Images/bannerloop.mp4" type="video/mp4">
-</video>
-
-<img id="frogRight" class="frogRight">
-
-</div>
-
-</header>
-
-
-
-<div class="section contentRow">
-
-<div class="contentBox">
-
-<h2>Latest Stream</h2>
-
-<iframe
-width="100%"
-height="350"
-src="https://www.youtube.com/embed/live_stream?channel=UCduyfl_JAmffIzpufoOj1OQ"
-frameborder="0"
-allowfullscreen>
-</iframe>
-
-</div>
-
-
-
-<div class="contentBox">
-
-<h2>Latest Upload</h2>
-
-<div id="latestVideo"></div>
-
-</div>
-
-</div>
-
-<div style="margin-top:20px;">
-<a href="https://youtube.com/@KeRMiTaKiLlA" target="_blank"
-style="padding:12px 25px;border:2px solid #00ff66;color:#00ff66;text-decoration:none;border-radius:6px;">
-Subscribe on YouTube
-</a>
-</div>
-
-
-<div class="section buttons">
-
-<a href="https://youtube.com/@KeRMiTaKiLlA">YouTube</a>
-<a href="https://twitch.tv/kermitakilla">Twitch</a>
-<a href="https://discord.gg/C5XGb98qaj">Discord</a>
-
-</div>
-
-
-<div class="section merch">
-
-<h2>Official Kermitakilla Merch</h2>
-
-<!-- STORE BUTTON -->
-<a href="#store" class="store-btn">
-  <img src="/images/ui/store/kermitakilla-store-main.webp" 
-       alt="Swamp Store" 
-       class="store-img">
-</a>
-
-<!-- PREVIEW ITEMS -->
-<div class="merchPreview">
-  <img src="Images/hoodie.png">
-  <img src="Images/shirt.png">
-  <img src="Images/hat.png">
-</div>
-
-<!-- STORE LINK -->
-<a class="merchButton"
-href="https://merch.streamlabs.com/kermitakilla"
-target="_blank">
-Enter the Swamp Shop
-</a>
-
-<p>
-Some days the drops are legendary.<br>
-Some days the RNG laughs at us.<br><br>
-Either way — the grind continues.
-</p>
-
-</div>
-
-
-
-<div class="section">
-
-<h2>Games on the Channel</h2>
-
-<p>
-
-Diablo II Resurrected<br>
-Call of Duty Warzone<br>
-The Division 1 & 2<br>
-Destiny 2<br>
-Remnant 2<br>
-Outriders
-
-</p>
-
-</div>
-
-
-
-<footer>
-
-© 2026 Kermitakilla.live
-
-<br>
-
-Welcome to the Swamp 🐸
-
-</footer>
-
-
-
-<script>
-
-const frogs = [
-
-"Images/AgentFrog1c.png",
-"Images/Ff7c1.png",
-"Images/Gunslinger1c.png",
-"Images/Jedi2c.png",
-"Images/Jedic1.png",
-"Images/Samurai1c.png",
-"Images/Sc1.png",
-"Images/Tactical1c.png"
-
-];
-
-function randomFrog(){
-return frogs[Math.floor(Math.random()*frogs.length)];
-}
-
-window.onload = function(){
-
-document.getElementById("frogLeft").src = randomFrog();
-document.getElementById("frogRight").src = randomFrog();
-
-};
-
-</script>
 </body>
 </html>
