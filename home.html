@@ -27,10 +27,19 @@ max-width:100%;
 height:auto;
 }
 
-header{
-    padding:15px 12px 35px;
-    background:linear-gradient(#001a00,#000);
-    border-bottom:2px solid #00ff66;
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 28px;
+        letter-spacing: 0;
+        overflow-wrap: anywhere;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    header {
+        padding: 15px 10px 35px;
+        box-sizing: border-box;
+    }
 }
 h1, h2, h3 {
   font-family:'Cinzel', serif;
