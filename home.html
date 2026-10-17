@@ -137,8 +137,32 @@ color:#000;
   margin-top:20px;
 }
 
+.store-btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+  transition:transform .25s ease;
+}
+
 .store-img{
-width:200px;
+  width:200px;
+  height:auto;
+  content:url("images/ui/store/kermitakilla-store-main2.webp");
+  transition:content .2s ease;
+}
+
+.store-btn:hover .store-img{
+  content:url("images/ui/store/kermitakilla-store-hover2.webp");
+}
+
+.store-btn:hover{
+  transform:scale(1.05);
+}
+
+.store-btn:active{
+  transform:scale(0.95);
+}
 }
 
 <a href="https://kermits-unbound-merch.printify.me/" class="store-btn">
